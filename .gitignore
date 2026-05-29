@@ -1,33 +1,39 @@
-HELP.md
+# ==========================================
+# 1. Target / Compiled Java Code (Crucial)
+# ==========================================
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+*.class
+*.jar
+*.war
+*.ear
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
+# ==========================================
+# 2. IntelliJ IDEA Configs (Avoid team conflicts)
+# ==========================================
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# ==========================================
+# 3. Build & Package Managers
+# ==========================================
+.mvn/
+mvnw
+mvnw.cmd
+.gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# ==========================================
+# 4. System Clutter & Logs
+# ==========================================
+*.log
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# 5. Sensitive Data / Secrets (VERY IMPORTANT)
+# ==========================================
+# Un-comment the line below if you create separate files for production passwords
+# secret.properties
